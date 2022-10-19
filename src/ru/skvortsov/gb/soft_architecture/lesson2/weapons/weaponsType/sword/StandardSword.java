@@ -1,4 +1,6 @@
-package ru.skvortsov.gb.soft_architecture.lesson2.weapons.sword;
+package ru.skvortsov.gb.soft_architecture.lesson2.weapons.weaponsType.sword;
+
+import ru.skvortsov.gb.soft_architecture.lesson2.weapons.Sword;
 
 public class StandardSword extends Sword {
 
@@ -7,7 +9,7 @@ public class StandardSword extends Sword {
 
     private final int damage;
 
-    protected StandardSword() {
+    public StandardSword() {
         this.damage = getValueInTheRange(min, max);
         System.out.println("Создан стандартный меч с уроном = "+ damage);
     }

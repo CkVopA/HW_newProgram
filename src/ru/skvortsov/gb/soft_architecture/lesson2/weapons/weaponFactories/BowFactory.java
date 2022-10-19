@@ -1,8 +1,9 @@
-package ru.skvortsov.gb.soft_architecture.lesson2.weapons.bow;
+package ru.skvortsov.gb.soft_architecture.lesson2.weapons.weaponFactories;
 
 import ru.skvortsov.gb.soft_architecture.lesson2.weapons.Weapon;
-import ru.skvortsov.gb.soft_architecture.lesson2.weapons.WeaponFactory;
-import ru.skvortsov.gb.soft_architecture.lesson2.weapons.WeaponType;
+import ru.skvortsov.gb.soft_architecture.lesson2.weapons.weaponsType.bow.ElfBow;
+import ru.skvortsov.gb.soft_architecture.lesson2.weapons.weaponsType.bow.StandardBow;
+import ru.skvortsov.gb.soft_architecture.lesson2.weapons.weaponsType.WeaponType;
 
 public  class BowFactory extends WeaponFactory {
 
@@ -13,11 +14,9 @@ public  class BowFactory extends WeaponFactory {
         switch (type){
             case STANDARD -> {
                 weapon = new StandardBow();
-                break;
             }
             case ELF -> {
                 weapon = new ElfBow();
-                break;
             }
         }
         return weapon;

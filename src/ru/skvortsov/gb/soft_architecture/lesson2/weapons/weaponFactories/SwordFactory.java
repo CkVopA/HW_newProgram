@@ -1,8 +1,9 @@
-package ru.skvortsov.gb.soft_architecture.lesson2.weapons.sword;
+package ru.skvortsov.gb.soft_architecture.lesson2.weapons.weaponFactories;
 
 import ru.skvortsov.gb.soft_architecture.lesson2.weapons.Weapon;
-import ru.skvortsov.gb.soft_architecture.lesson2.weapons.WeaponFactory;
-import ru.skvortsov.gb.soft_architecture.lesson2.weapons.WeaponType;
+import ru.skvortsov.gb.soft_architecture.lesson2.weapons.weaponsType.sword.ElfSword;
+import ru.skvortsov.gb.soft_architecture.lesson2.weapons.weaponsType.sword.StandardSword;
+import ru.skvortsov.gb.soft_architecture.lesson2.weapons.weaponsType.WeaponType;
 
 public  class SwordFactory extends WeaponFactory {
 
@@ -13,11 +14,13 @@ public  class SwordFactory extends WeaponFactory {
         switch (type){
             case STANDARD -> {
                 weapon = new StandardSword();
-                break;
             }
             case ELF -> {
                 weapon = new ElfSword();
-                break;
+            }
+            case DWARF -> {
+            }
+            case GLASS -> {
             }
         }
         return weapon;
