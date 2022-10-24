@@ -24,16 +24,16 @@ import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.shapeTypes.Triangle;
  */
 
 public class Main {
-    public static void main(String[] args) throws WrongSideLength_Exception {
+        public static void main(String[] args) throws WrongSideLength_Exception {
         Shape tr1 = new Triangle(3,5,7);
         Shape sq1 = new Square(5);
         Shape re1 = new Rectangle(2, 6);
         Shape ci1 = new Circle(5);
-
-        Shape tr2 = new Triangle(2,6,8);
-        Shape sq2 = new Square(2);
-        Shape re2 = new Rectangle(3, 5);
-        Shape ci2 = new Circle(-9);
+        System.out.println("----------------------------------------");
+//        Shape tr2 = new Triangle(2,6,8);
+//        Shape sq2 = new Square(2);
+//        Shape re2 = new Rectangle(3, 5);
+//        Shape ci2 = new Circle(-9);
 
 
         Shape[] arrShape = {tr1, sq1, re1, ci1};

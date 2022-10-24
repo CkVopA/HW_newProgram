@@ -1,11 +1,11 @@
 package ru.skvortsov.gb.soft_architecture.lesson3.hw_3.shapeTypes;
 
-import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.I_Triangle;
+import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.I_FigurePolygon;
 import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.Shape;
 import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.shapeException.NegativeValue_Exception;
 import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.shapeException.WrongSideLength_Exception;
 
-public class Triangle extends Shape implements I_Triangle {
+public class Triangle extends Shape implements I_FigurePolygon {
     private final int sideA;
     private final int sideB;
     private final int sideC;
@@ -28,14 +28,12 @@ public class Triangle extends Shape implements I_Triangle {
         }
     }
 
-    @Override
-    public void perimeterOfTriangle() {
+    public void perimeterOfFigure() {
         double perimeter = sideA+sideB+sideC;
         System.out.println("Периметр треугольника = "+ perimeter);
     }
 
-    @Override
-    public void areaOfTriangle() {
+    public void areaOfFigure() {
         double p = (sideA+sideB+sideC)/2d;
         double resultArea = Math.sqrt(p*(p-sideA)*(p-sideB)*(p-sideC));  // Формула Герона
         System.out.println("Площадь треугольника = "+ resultArea);

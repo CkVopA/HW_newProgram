@@ -1,31 +1,28 @@
 package ru.skvortsov.gb.soft_architecture.lesson3.hw_3.shapeTypes;
 
-import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.I_Square;
+import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.I_FigurePolygon;
 import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.Shape;
 import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.shapeException.NegativeValue_Exception;
 
-public class Square extends Shape implements I_Square {
-    private int sideLength;
+public class Square extends Shape implements I_FigurePolygon {
+    private final int sideA;
 
-    public Square(int sideLength) throws NegativeValue_Exception {
-        if (sideLength > 0){
-            this.sideLength = sideLength;
-            System.out.println("Создан квадрат со сторонами "+sideLength);
+    public Square(int sideA) throws NegativeValue_Exception {
+        if (sideA > 0){
+            this.sideA = sideA;
+            System.out.println("Создан квадрат со сторонами "+sideA);
         } else {
             throw new NegativeValue_Exception();
         }
-
     }
 
-    @Override
-    public void perimeterOfSquare() {
-        double perimeter = sideLength*4;
-        System.out.println("Периметр квадрата = " + perimeter);
+    public void perimeterOfFigure() {
+        double perimeter = 4*(sideA);
+        System.out.println("Периметр квадрата = "+ perimeter);
     }
 
-    @Override
-    public void areaOfSquare() {
-        double area = sideLength * sideLength;
+    public void areaOfFigure() {
+        double area = sideA*sideA;
         System.out.println("Площадь квадрата = "+ area);
     }
 }
