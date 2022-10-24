@@ -5,7 +5,7 @@ import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.Shape;
 import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.shapeException.NegativeValue_Exception;
 
 public class Circle extends Shape implements I_Circle {
-    private int radius;
+    private final int radius;
 
     public Circle(int radius) throws NegativeValue_Exception {
         if (radius > 0){
