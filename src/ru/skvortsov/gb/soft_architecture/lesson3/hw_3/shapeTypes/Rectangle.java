@@ -1,10 +1,9 @@
 package ru.skvortsov.gb.soft_architecture.lesson3.hw_3.shapeTypes;
 
-import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.I_FigurePolygon;
-import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.Shape;
+import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.Polygon;
 import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.shapeException.NegativeValue_Exception;
 
-public class Rectangle extends Shape implements I_FigurePolygon {
+public class Rectangle extends Polygon {
     private final int sideA;
     private final int sideB;
 
@@ -19,14 +18,14 @@ public class Rectangle extends Shape implements I_FigurePolygon {
     }
 
     @Override
-    public void perimeterOfFigure() {
-        double perimeter = 2*(sideA+sideB);
-        System.out.println("Периметр прямоугольника = "+ perimeter);
+    public void calculateAreaFigure() {
+        double area = sideA * sideB;
+        System.out.println("Площадь прямоугольника = "+ area);
     }
 
     @Override
-    public void areaOfFigure() {
-        double area = sideA * sideB;
-        System.out.println("Площадь прямоугольника = "+ area);
+    public void calculatePerimeterFigure() {
+        double perimeter = 2*(sideA+sideB);
+        System.out.println("Периметр прямоугольника = "+ perimeter);
     }
 }

@@ -1,10 +1,9 @@
 package ru.skvortsov.gb.soft_architecture.lesson3.hw_3.shapeTypes;
 
-import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.I_FigurePolygon;
-import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.Shape;
+import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.InterfaceOfShape.Polygon;
 import ru.skvortsov.gb.soft_architecture.lesson3.hw_3.shapeException.NegativeValue_Exception;
 
-public class Square extends Shape implements I_FigurePolygon {
+public class Square extends Polygon {
     private final int sideA;
 
     public Square(int sideA) throws NegativeValue_Exception {
@@ -16,12 +15,14 @@ public class Square extends Shape implements I_FigurePolygon {
         }
     }
 
-    public void perimeterOfFigure() {
+    @Override
+    public void calculateAreaFigure() {
         double perimeter = 4*(sideA);
         System.out.println("Периметр квадрата = "+ perimeter);
     }
 
-    public void areaOfFigure() {
+    @Override
+    public void calculatePerimeterFigure() {
         double area = sideA*sideA;
         System.out.println("Площадь квадрата = "+ area);
     }
